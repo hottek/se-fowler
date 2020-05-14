@@ -15,7 +15,11 @@ class Customer {
         return name;
     };
     public String statement() {
-        Enumeration enum_rentals = rentals.elements();	    
+        return getHTMLStatement();
+    }
+
+    private String getHTMLStatement() {
+        Enumeration enum_rentals = rentals.elements();
         String result = "Rental Record for " + this.getName() + "\n";
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
